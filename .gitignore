@@ -1,0 +1,4 @@
+# pyton
+*.py[cod]
+
+/*.json
