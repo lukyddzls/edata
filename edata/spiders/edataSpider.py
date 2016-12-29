@@ -67,8 +67,8 @@ class shSpider(CrawlSpider):
             item = MarketItem()
             item['type'] = 'sh'
             item['day'] = content.re_first(r'var searchDate = \'\s*(.*)\';')
-            item['zsz'] = content.re_first(r'var marketValueA = \'\s*(.*)\';')
-            item['ltsz'] = content.re_first(r'var negotiableValueA = \'\s*(.*)\';')
+            item['zsz'] = content.re_first(r'var marketValue = \'\s*(.*)\';')
+            item['ltsz'] = content.re_first(r'var negotiableValue = \'\s*(.*)\';')
             yield item
 
 class szHisSpider(CrawlSpider):
@@ -116,6 +116,6 @@ class shHisSpider(CrawlSpider):
             item = MarketItem()
             item['type'] = 'sh'
             item['day'] = content.re_first(r'var searchDate = \'\s*(.*)\';')
-            item['zsz'] = content.re_first(r'var marketValueA = \'\s*(.*)\';')
-            item['ltsz'] = content.re_first(r'var negotiableValueA = \'\s*(.*)\';')
+            item['zsz'] = content.re_first(r'var marketValue = \'\s*(.*)\';')
+            item['ltsz'] = content.re_first(r'var negotiableValue = \'\s*(.*)\';')
             yield item
